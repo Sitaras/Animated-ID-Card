@@ -1,11 +1,6 @@
-import {
-  useRef,
-  useState,
-  useCallback,
-  useEffect,
-  Fragment,
-} from "react";
+import { useRef, useState, useCallback, useEffect, Fragment } from "react";
 import useEventListener from "../../hooks/useEventListener";
+import { useOs } from "@mantine/hooks";
 
 const AnimatedCursor = ({
   color = "76, 196, 176",
@@ -15,6 +10,8 @@ const AnimatedCursor = ({
   outerScale = 5,
   innerScale = 0.7,
 }) => {
+  const os = useOs();
+
   const cursorOuterRef = useRef<HTMLDivElement>(null);
   const cursorInnerRef = useRef<HTMLDivElement>(null);
 
@@ -200,7 +197,7 @@ const AnimatedCursor = ({
     },
   };
 
-  return (
+  return os === "android" || os === "ios" ? null : (
     <Fragment>
       <div ref={cursorOuterRef} style={styles.cursorOuter} />
       <div ref={cursorInnerRef} style={styles.cursorInner} />

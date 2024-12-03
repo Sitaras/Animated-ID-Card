@@ -1,0 +1,5 @@
+.container {
+  background-color: var(--mantine-color-opire-secondary-9);
+  border-color: #b0b0b0;
+  color: var(--mantine-color-white);
+}

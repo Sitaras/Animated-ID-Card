@@ -1,0 +1,18 @@
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  min-width: 100vh !important;
+  min-height: 100vh !important;
+}
+
+html,
+body {
+  background-color: #2f2c2c !important;
+}
+
+html *,
+body * {
+  cursor: none;
+}

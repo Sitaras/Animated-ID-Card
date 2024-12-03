@@ -1,0 +1,66 @@
+.container {
+  border-radius: 1rem;
+  padding: 1rem;
+  background-color: var(--mantine-color-opire-secondary-0);
+  color: var(--mantine-color-opire-primary-0);
+  max-width: 30rem;
+  width: 100%;
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  margin: 0.25rem;
+}
+
+.animatedContainer {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  filter: drop-shadow(0 0 1em var(--mantine-color-opire-primary-0));
+
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.animatedContainer:hover {
+  filter: drop-shadow(0 0 2em var(--mantine-color-opire-primary-0));
+}
+
+.animatedContainer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 0.25rem solid var(--mantine-color-opire-primary-0);
+  animation: clippath 10s infinite linear;
+  border-radius: 1.25rem;
+}
+
+.animatedContainer:hover::before {
+  border-color: var(--mantine-color-opire-primary-9);
+}
+
+@keyframes clippath {
+  0%,
+  100% {
+    clip-path: inset(0 0 95% 0);
+  }
+  25% {
+    clip-path: inset(0 95% 0 0);
+  }
+  50% {
+    clip-path: inset(95% 0 0 0);
+  }
+  75% {
+    clip-path: inset(0 0 0 95%);
+  }
+}

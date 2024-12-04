@@ -7,7 +7,7 @@ export type AchievementsSectionProps = {
 };
 
 const AchievementsSection = ({
-  sectionTitle = "Skills & Achievements",
+  sectionTitle = "Achievements",
   achievementLabels,
 }: AchievementsSectionProps) => {
   return (

@@ -5,13 +5,12 @@
   color: var(--mantine-color-opire-primary-0);
   max-width: 30rem;
   width: 100%;
-}
 
-.container {
   position: relative;
   z-index: 1;
   margin: 0.25rem;
 }
+
 
 .animatedContainer {
   position: relative;
@@ -20,7 +19,6 @@
   align-items: center;
   justify-content: center;
 
-  position: relative;
   z-index: 1;
   width: 100%;
   filter: drop-shadow(0 0 1em var(--mantine-color-opire-primary-0));

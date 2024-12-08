@@ -1,10 +1,15 @@
+import cn from "classnames";
+
 import { Container, Flex } from "@mantine/core";
-import OverviewSection from "./OverviewSection/OverviewSection";
-import UserInfoSection from "./UserInfoSection/UserInfoSection";
-import AchievementsSection from "./AchievementsSection/AchievementsSection";
-import { UserInfoSectionProps } from "./UserInfoSection/UserInfoSection";
-import { OverviewSectionProps } from "./OverviewSection/OverviewSection";
-import { AchievementsSectionProps } from "./AchievementsSection/AchievementsSection";
+import OverviewSection, {
+  OverviewSectionProps,
+} from "./OverviewSection/OverviewSection";
+import UserInfoSection, {
+  UserInfoSectionProps,
+} from "./UserInfoSection/UserInfoSection";
+import AchievementsSection, {
+  AchievementsSectionProps,
+} from "./AchievementsSection/AchievementsSection";
 
 import styles from "./IdDevCard.module.css";
 
@@ -12,13 +17,15 @@ const IdDevCard = ({
   userInfoData,
   overviewData,
   achievementsData,
+  className,
 }: {
   userInfoData: UserInfoSectionProps;
   overviewData: OverviewSectionProps;
   achievementsData: AchievementsSectionProps;
+  className?: string;
 }) => {
   return (
-    <Container className={styles.animatedContainer} p="0">
+    <Container className={cn(styles.animatedContainer, className)} p="0">
       <Container className={styles.container}>
         <Flex
           gap="md"

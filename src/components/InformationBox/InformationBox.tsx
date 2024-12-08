@@ -22,7 +22,7 @@ const InformationBox = ({
         <Text size="md" ta="left">
           {label}
         </Text>
-        <Text size="xl" fw="bold">
+        <Text size="md" fw="bold">
           {value}
         </Text>
       </Stack>
